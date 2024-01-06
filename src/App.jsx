@@ -4,6 +4,7 @@ import img1 from "./assets/icon-supervisor.svg";
 import img2 from "./assets/icon-team-builder.svg";
 import img3 from "./assets/icon-karma.svg";
 import img4 from "./assets/icon-calculator.svg";
+import Card from "./components/Card";
 
 function App() {
   return (
@@ -12,47 +13,40 @@ function App() {
         <h1 className="first-title"> Reliable, efficient delivery</h1>
         <h1 className="second-title"> Powered by Technology</h1>
         <p className="header-text">
-          Our Artificial Intelligence powered tools use millions of project data{" "}
+          Our Artificial Intelligence powered tools use millions of project data
           <br />
           points to ensure that your project is successful
         </p>
       </div>
-      <div className="all-cards">
-        <div className="card-one">
-          <div className="card-info">
-            <h1>Supervisor</h1>
-            <p>Monitors activity to identify project roadblocks</p>
-          </div>
-          <img className="icon" src={img1} alt="" />
+      <div className="container-cards">
+        <Card
+          title="Supervisor"
+          text=" Monitors activity to identify project roadblocks"
+          img={img1}
+          borderColor="hsl(180, 62%, 55%)"
+        />
+        <div className="middle-cards">
+          <Card
+            title="Team Builder"
+            text="Scans our talent network to create the optimal team for your
+        project"
+            img={img2}
+            borderColor="hsl(0, 78%, 62%)"
+          />
+          <Card
+            title="Karma"
+            text=" Regularly evaluates our talent to ensure quality"
+            img={img3}
+            borderColor="hsl(34, 97%, 64%)"
+          />
         </div>
-        <div className="middle-container">
-          <div className="card-two">
-            <div className="card-info">
-              <h1>Team Builder</h1>
-              <p>
-                Scans our talent network to create the optimal team for your
-                project
-              </p>
-            </div>
-            <img className="icon" src={img2} alt="" />
-          </div>
-          <div className="card-three">
-            <div className="card-info">
-              <h1> Karma</h1>
-              <p>Regularly evaluates our talent to ensure quality</p>
-            </div>
-            <img className="icon" src={img3} alt="" />
-          </div>
-        </div>
-        <div className="card-four">
-          <div className="card-info">
-            <h1>Calculator</h1>
-            <p>
-              Uses data from past projects to provide better delivery estimates
-            </p>
-          </div>
-          <img className="icon" src={img4} alt="" />
-        </div>
+
+        <Card
+          title="Calculator"
+          text=" Uses data from past projects to provide better delivery estimates"
+          img={img4}
+          borderColor="hsl(212, 86%, 64%)"
+        />
       </div>
     </>
   );
